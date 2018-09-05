@@ -17,6 +17,7 @@ class GoalForm extends PureComponent {
 
   handleSubmit = event => {
     event.preventDefault();
+    if(!this.state.goal) return;
     this.props.submit(this.state);
   };
 

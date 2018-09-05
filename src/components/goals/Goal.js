@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { toggleComplete } from './actions';
+import { connect } from 'react-redux';
 
 class Goal extends PureComponent {
   state = {
