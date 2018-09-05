@@ -27,15 +27,23 @@ class Header extends Component {
           <nav>
             <ul>
               <li>
-                <NavLink exact to="/goals">Goals</NavLink>
+                <NavLink exact to="/goals">
+                  <i className="fas fa-list"></i>
+                </NavLink>
               </li>
               <li>
-                <NavLink exact to="/users">Users</NavLink>
+                <NavLink exact to="/users">
+                  <i className="fas fa-users"></i>
+                </NavLink>
               </li>
               <li>
                 { user
-                  ? <NavLink to="/" onClick={logout}>Logout</NavLink>
-                  : <NavLink to="/auth">Login</NavLink>
+                  ? <NavLink to="/" onClick={logout}>
+                    <i className="fas fa-sign-out-alt"></i>
+                  </NavLink>
+                  : <NavLink to="/auth">
+                    <i className="fas fa-sign-in-alt"></i>
+                  </NavLink>
                 }
               </li>
             </ul>
