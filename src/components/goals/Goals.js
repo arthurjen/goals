@@ -5,6 +5,7 @@ import { getUser } from '../auth/reducers';
 import { getGoals } from './reducers';
 import { loadGoals, addGoal } from './actions';
 import GoalForm from './GoalForm';
+import Goal from './Goal';
 import styles from './Goals.css';
 
 export class Goals extends PureComponent {
@@ -16,10 +17,12 @@ export class Goals extends PureComponent {
   static propTypes = {
     user: PropTypes.object.isRequired,
     loadGoals: PropTypes.func.isRequired,
-    addGoal: PropTypes.func.isRequired
+    addGoal: PropTypes.func.isRequired,
+    goals: PropTypes.array.isRequired
   };
 
   componentDidMount() {
+    this.props.loadGoals();
   }
 
   handleAdd = goal => {
@@ -34,7 +37,7 @@ export class Goals extends PureComponent {
 
   render() { 
     const { adding } = this.state;
-    const { user } = this.props;
+    const { user, goals } = this.props;
 
     return (
       <div className={styles.goals}>
@@ -42,7 +45,15 @@ export class Goals extends PureComponent {
           ? <GoalForm submit={this.handleAdd}/>
           : <p onClick={this.toggleAdding}>Add a Goal</p>
         }
-        <h2>YOU ARE {user.name}!</h2>
+        <h2>Goals for {user.name}:</h2>
+        <ul className="goals-list">
+          {goals.map(goal => (
+            <Goal
+              key={goal._id}
+              goal={goal}
+            />
+          ))}
+        </ul>
       </div>
     );
   }

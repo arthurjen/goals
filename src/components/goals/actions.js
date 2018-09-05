@@ -1,5 +1,5 @@
-import { GOALS_LOAD, GOALS_ADD } from './reducers';
-import { getGoals, postGoal } from '../../services/api';
+import { GOALS_LOAD, GOALS_ADD, GOAL_TOGGLE } from './reducers';
+import { getGoals, postGoal, toggleGoal } from '../../services/api';
 
 export const loadGoals = () => {
   return {
@@ -12,5 +12,12 @@ export const addGoal = data => {
   return {
     type: GOALS_ADD,
     payload: postGoal(data)
+  };
+};
+
+export const toggleComplete = id => {
+  return {
+    type: GOAL_TOGGLE,
+    payload: toggleGoal(id)
   };
 };

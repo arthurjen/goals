@@ -20,3 +20,4 @@ export const verifyUser = token => {
 
 export const getGoals = () => get(`${GOALS_URL}`);
 export const postGoal = data => post(`${GOALS_URL}`, data);
+export const toggleGoal = id => post(`${GOALS_URL}/${id}`);
