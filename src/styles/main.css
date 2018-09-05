@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background-image: linear-gradient( white, yellow);
+  background-image: linear-gradient(to bottom right, #128494, #00B7C2);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,13 +8,19 @@ html {
 
 body {
   height: 100%;
-  margin: 0;
+  margin: 20px;
+  font-family: 'Glegoo', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
 
+h1 {
+  font-weight: 700;
 }
 
 button {
+  font-family: 'Glegoo', serif;
 
 }

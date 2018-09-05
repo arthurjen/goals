@@ -22,8 +22,15 @@ class Header extends Component {
     return (
       <header className={styles.header}>
         <section>
-          {user && <span>Logged in as {user.name}</span>}
-          <h1><NavLink exact to="/">GOALS</NavLink></h1>
+          <section id="title">
+            <h1><NavLink exact to="/">Goals</NavLink></h1>
+            {user &&
+              <span>
+                <i className="fas fa-user"></i>
+                {user.name}
+              </span>
+            }
+          </section>
           <nav>
             <ul>
               <li>

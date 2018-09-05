@@ -1,4 +1,6 @@
 :local(.header) {
+  border-bottom: 5px solid #ECFEFF;
+
   ul {
     display: flex;
     justify-content: space-around;
@@ -6,4 +8,28 @@
     padding: 0;
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h1, i, span {
+    color: #ECFEFF;
+  }
+
+  h1 {
+    font-size: 2em;
+    letter-spacing: 4px;
+    margin: 5px 0px;
+  }
+
+  #title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  span>i {
+    margin-right: 5px;
+  }
 }
