@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
@@ -9,9 +9,9 @@ import Header from './Header';
 import Home from './Home';
 import Auth from '../auth/Auth';
 import Goals from '../goals/Goals';
-import styles from './App.css'
+import styles from './App.css';
 
-class App extends Component {
+class App extends PureComponent {
 
   static propTypes = {
     tryLoadUser: PropTypes.func.isRequired,

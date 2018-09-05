@@ -1,0 +1,38 @@
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import FormControl from '../shared/FormControl';
+
+class GoalForm extends PureComponent {
+  state = {
+    goal: ''
+  };
+
+  static propTypes = {
+    submit: PropTypes.func.isRequired
+  };
+
+  handleChange = ({ target }) => {
+    this.setState({ [target.name]: target.value });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.submit(this.state);
+  };
+
+  render() { 
+    const { goal } = this.state;
+
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <h3>Add a Goal</h3>
+        <FormControl label="goal">
+          <input name="goal" value={goal} onChange={this.handleChange}/>
+        </FormControl>
+        <button>Add</button>
+      </form>
+    );
+  }
+}
+ 
+export default GoalForm;

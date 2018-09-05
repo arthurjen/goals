@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../auth/reducers';
@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 import Error from './Error';
 import styles from './Header.css';
 
-class Header extends Component {
+class Header extends PureComponent {
 
   static propTypes = {
     user: PropTypes.object,

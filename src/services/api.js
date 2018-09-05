@@ -2,7 +2,7 @@ import { get, post } from './request';
 
 const URL = '/api';
 const AUTH_URL = `${URL}/auth`;
-const MATCH_URL = `${URL}/matches`;
+const GOALS_URL = `${URL}/me/goals`;
 const SIGNUP_URL = `${AUTH_URL}/signup`;
 const SIGNIN_URL = `${AUTH_URL}/signin`;
 
@@ -17,3 +17,6 @@ export const verifyUser = token => {
     }
   });
 };
+
+export const getGoals = () => get(`${GOALS_URL}`);
+export const postGoal = data => post(`${GOALS_URL}`, data);
