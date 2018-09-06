@@ -1,4 +1,23 @@
 :local(.goals) {
+  
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px;
+    padding: 0px 20px;
+    color: #ECFEFF;
+    transition: all .5s ease;
+    background-image: linear-gradient(to bottom right, rgb(185, 20, 84), rgb(238, 61, 61));
+  }
 
 
+  .true {
+    color: rgb(34, 29, 29);
+    background-image: linear-gradient(to bottom right, #4EF037, rgb(221, 241, 193));
+  }
 }

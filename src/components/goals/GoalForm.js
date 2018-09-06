@@ -11,6 +11,10 @@ class GoalForm extends PureComponent {
     submit: PropTypes.func.isRequired
   };
 
+  componentDidMount() {
+    this.nameInput.focus();
+  }
+
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
   };
@@ -28,7 +32,7 @@ class GoalForm extends PureComponent {
       <form onSubmit={this.handleSubmit}>
         <h3>Add a Goal</h3>
         <FormControl label="goal">
-          <input name="goal" value={goal} onChange={this.handleChange}/>
+          <input ref={node => this.nameInput = node} name="goal" value={goal} onChange={this.handleChange}/>
         </FormControl>
         <button>Add</button>
       </form>

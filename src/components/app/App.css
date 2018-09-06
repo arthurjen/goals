@@ -1,2 +1,6 @@
 :local(.app) {
+  button {
+    background: #ECFEFF;
+    border: none;
+  }
 }

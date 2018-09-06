@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { toggleComplete } from './actions';
 import { connect } from 'react-redux';
+import GoalDisplay from './GoalDisplay';
+import styles from './Goal.css';
 
 class Goal extends PureComponent {
   state = {
@@ -25,14 +27,15 @@ class Goal extends PureComponent {
   render() { 
     const { goal } = this.props;
     return (
-      <li onClick={this.handleToggle}>
-        <p>{goal.goal}</p>
-        <p>completed: {goal.completed ? 'Yes' : 'No'}</p>
+      <li
+        onClick={this.handleToggle}
+        className={[styles.goal, goal.completed].join(' ')}
+      >
+        <GoalDisplay goal={goal}/>
       </li>
     );
   }
 }
- 
 export default connect(
   null,
   { toggleComplete }
