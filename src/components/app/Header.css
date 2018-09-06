@@ -3,7 +3,7 @@
 
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style-type: none;
     padding: 0;
   }
@@ -24,7 +24,7 @@
   h1 {
     font-size: 2em;
     letter-spacing: 2px;
-    margin: 5px 0px;
+    margin: 20px 0px;
   }
 
   #title {

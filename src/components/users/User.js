@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import styles from './User.css';
 
 class User extends PureComponent {
   static propTypes = {
@@ -10,10 +11,13 @@ class User extends PureComponent {
     const { user } = this.props;
 
     return (
-      <li>
+      <li className={styles.user}>
         <p>{user.name}</p>
-        <p>Completed Goals: {user.completed}</p>
-        <p>Total Goals: {user.total}</p>
+        <section className="numbers">
+          <p className="number">{user.completed}</p>
+          <p className="number">/</p>
+          <p className="number">{user.total}</p>
+        </section>
       </li>
     );
   }
