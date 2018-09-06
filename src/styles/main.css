@@ -1,5 +1,4 @@
 html {
-  height: 100%;
   background-image: linear-gradient(to bottom right, #128494, #00B7C2);
   background-position: center;
   background-repeat: no-repeat;
@@ -10,9 +9,10 @@ html {
 
 body {
   /* overflow: hidden; */
-  height: 100%;
-  margin: 30px;
+  height: 100vh;
+  margin: 0px 30px;
   font-family: 'Glegoo', serif;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
