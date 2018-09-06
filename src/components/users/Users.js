@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getUsersGoals } from './reducers';
 import { loadUsersGoals } from './actions';
 import User from './User';
+import styles from './Users.css';
 
 class Users extends PureComponent {
   static propTypes = {
@@ -18,8 +19,7 @@ class Users extends PureComponent {
   render() { 
     const { users } = this.props;
     return (
-      <div>
-        <h1>users</h1>
+      <div className={styles.users}>
         <ul className="users-list">
           {users.map(user => (
             <User

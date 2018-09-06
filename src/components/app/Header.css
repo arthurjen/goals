@@ -1,11 +1,15 @@
 :local(.header) {
-  border-bottom: 5px solid #ECFEFF;
+  border-bottom: 2px solid #08606b;
 
   ul {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     padding: 0;
+  }
+
+  li {
+    color: #ECFEFF;
   }
 
   a {

@@ -23,7 +23,7 @@ class Header extends PureComponent {
       <header className={styles.header}>
         <section>
           <section id="title">
-            <h1><NavLink exact to="/">Goals</NavLink></h1>
+            <h1><NavLink exact to="/">goalpost</NavLink></h1>
             {user &&
               <span>
                 <i className="fas fa-user"></i>
@@ -35,21 +35,21 @@ class Header extends PureComponent {
             <ul>
               <li>
                 <NavLink exact to="/goals">
-                  <i className="fas fa-list"></i>
+                  <i className="fas fa-list"></i> goals
                 </NavLink>
               </li>
               <li>
                 <NavLink exact to="/users">
-                  <i className="fas fa-users"></i>
+                  <i className="fas fa-users"></i> users
                 </NavLink>
               </li>
               <li>
                 { user
                   ? <NavLink to="/" onClick={logout}>
-                    <i className="fas fa-sign-out-alt"></i>
+                    <i className="fas fa-sign-out-alt"></i> logout
                   </NavLink>
                   : <NavLink to="/auth">
-                    <i className="fas fa-sign-in-alt"></i>
+                    <i className="fas fa-sign-in-alt"></i> login
                   </NavLink>
                 }
               </li>

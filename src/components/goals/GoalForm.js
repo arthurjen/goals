@@ -34,6 +34,7 @@ class GoalForm extends PureComponent {
         <FormControl label="goal">
           <input ref={node => this.nameInput = node} name="goal" value={goal} onChange={this.handleChange}/>
         </FormControl>
+        <button>Cancel</button>
         <button>Add</button>
       </form>
     );

@@ -41,13 +41,15 @@ export class Goals extends PureComponent {
 
     return (
       <div className={styles.goals}>
-        {adding 
-          ? <GoalForm submit={this.handleAdd}/>
-          : <button onClick={this.toggleAdding}>
-            <i className="fas fa-plus"></i>
-          </button>
-        }
-        <h2>Goals for {user.name}:</h2>
+        <section className='goals-title'>
+          <h2>goals for {user.name}:</h2>
+          {adding 
+            ? <GoalForm submit={this.handleAdd}/>
+            : <button onClick={this.toggleAdding}>
+              <i className="fas fa-plus"></i>
+            </button>
+          }
+        </section>
         <ul className="goals-list">
           {goals.map(goal => (
             <Goal
