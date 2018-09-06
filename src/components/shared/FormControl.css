@@ -1,13 +1,9 @@
 :local(.formControl) {
   
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-  font-size: .9em;
-  width: 130px;
-
+  
+  margin-bottom: 30px;
+ 
   input {
-    width: 100%;
     height: 50px;
     font-size: 1em;
     border-radius: 50px;

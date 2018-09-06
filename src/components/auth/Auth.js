@@ -26,13 +26,13 @@ class Auth extends PureComponent {
         <Switch>
           <Route path="/auth/signin" component={() => (
             <section>
-              <p>Not a user?<br/><Link to="/auth/signup">Create an account!</Link></p>
+              <p>Not a user? <Link to="/auth/signup">Create an account!</Link></p>
               <Credentials action="Sign In" submit={signin}/>
             </section>
           )}/>
           <Route path="/auth/signup" render={() => (
             <section>
-              <p>Already have an account?<br/> <Link to="/auth/signin">Log in!</Link></p>
+              <p>Already have an account? <Link to="/auth/signin">Log in!</Link></p>
               <Credentials action="Sign Up" submit={signup} allowName={true}/>
             </section>
           )}/>
