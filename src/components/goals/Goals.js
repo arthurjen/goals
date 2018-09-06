@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../auth/reducers';
@@ -42,12 +42,14 @@ export class Goals extends PureComponent {
     return (
       <div className={styles.goals}>
         <section className='goals-title'>
-          <h2>goals for {user.name}:</h2>
           {adding 
-            ? <GoalForm submit={this.handleAdd}/>
-            : <button onClick={this.toggleAdding}>
-              <i className="fas fa-plus"></i>
-            </button>
+            ? <GoalForm onCancel={this.toggleAdding} submit={this.handleAdd}/>
+            : <Fragment>
+              <h2>goals for {user.name}:</h2>
+              <button onClick={this.toggleAdding}>
+                <i className="fas fa-plus"></i>
+              </button>
+            </Fragment>
           }
         </section>
         <ul className="goals-list">

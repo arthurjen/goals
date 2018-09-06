@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import FormControl from '../shared/FormControl';
+import styles from './GoalForm.css';
 
 class GoalForm extends PureComponent {
   state = {
@@ -8,12 +8,18 @@ class GoalForm extends PureComponent {
   };
 
   static propTypes = {
-    submit: PropTypes.func.isRequired
+    submit: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired
   };
 
   componentDidMount() {
     this.nameInput.focus();
   }
+
+  handleCancel = event => {
+    event.preventDefault();
+    this.props.onCancel();
+  };
 
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
@@ -29,13 +35,12 @@ class GoalForm extends PureComponent {
     const { goal } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h3>Add a Goal</h3>
-        <FormControl label="goal">
-          <input ref={node => this.nameInput = node} name="goal" value={goal} onChange={this.handleChange}/>
-        </FormControl>
-        <button>Cancel</button>
-        <button>Add</button>
+      <form className={styles.goalForm} onSubmit={this.handleSubmit}>
+        <input ref={node => this.nameInput = node} name="goal" value={goal} onChange={this.handleChange}/>
+        <section className="buttons">
+          <button><i className="fas fa-plus"></i></button>
+          <button onClick={this.handleCancel}><i className="fas fa-ban"></i></button>
+        </section>
       </form>
     );
   }

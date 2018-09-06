@@ -13,7 +13,7 @@ class GoalDisplay extends PureComponent {
       <Fragment>
         <p>{goal.goal}</p>
         {completed && 
-        <i className="fas fa-check"></i>
+        <i className="fas fa-medal"></i>
         }
       </Fragment>
     );

@@ -20,6 +20,10 @@ class Users extends PureComponent {
     const { users } = this.props;
     return (
       <div className={styles.users}>
+        <section className="users-header">
+          <h4>name</h4>
+          <h4>completed / goals</h4>
+        </section>
         <ul className="users-list">
           {users.map(user => (
             <User
