@@ -7,8 +7,11 @@ export class Home extends Component {
 
     return (
       <div className={styles.home}>
-        <p>Set some goals. Complete them.</p>
-        <p>Look at other peoples goals. Judge them.</p>
+        <h1>welcome to goalpost</h1>
+        <p>Set some goals.</p>
+        <h3>Meet them.</h3>
+        <p>Check on the progress of others.</p>
+        <h3>Judge them.</h3>
         
       </div>
     );

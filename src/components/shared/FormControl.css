@@ -1,13 +1,24 @@
 :local(.formControl) {
+  
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
   font-size: .9em;
   width: 130px;
 
+  input {
+    width: 100%;
+    height: 50px;
+    font-size: 1em;
+    border-radius: 50px;
+    border: none;
+    padding-left: 15px;
+    box-shadow: 1px 1px 10px rgb(40, 63, 138);
+  }
+
+  
+
   label {
-    align-self: flex-start;
-    margin-bottom: 3px;
-    font-size: .85em;
+    color: #ECFEFF;
   }
 }
