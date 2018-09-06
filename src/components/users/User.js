@@ -11,7 +11,7 @@ class User extends PureComponent {
 
     return (
       <li>
-        <p>{user._id}</p>
+        <p>{user.name}</p>
         <p>Completed Goals: {user.completed}</p>
         <p>Total Goals: {user.total}</p>
       </li>

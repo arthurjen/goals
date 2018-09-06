@@ -9,7 +9,7 @@ export function goals(state = [], { type, payload }) {
     case GOALS_LOAD:
       return payload;
     case GOALS_ADD:
-      return [payload, ...state];
+      return [...state, payload];
     case GOAL_TOGGLE:
       return state.map(goal => goal._id === payload._id ? payload : goal);
     default:
