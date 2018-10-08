@@ -1,0 +1,10 @@
+:local(.app) {
+  button {
+    background: #ECFEFF;
+    border: none;
+  }
+
+  main {
+    overflow-y: auto;
+  }
+}

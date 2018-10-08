@@ -1,0 +1,30 @@
+:local(.users) {
+  margin-top: 20px;
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 0px 20px;
+    color: rgb(34, 29, 29);
+    transition: all .5s ease;
+    background: #ECFEFF;
+    box-shadow: 1px 1px 10px rgb(40, 63, 138);
+  }
+
+  .users-header {
+    color: #ECFEFF;
+    height: 80px;
+    margin-top: 20px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}

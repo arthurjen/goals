@@ -1,0 +1,40 @@
+:local(.header) {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #08606b;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    color: #ECFEFF;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h1, i, span {
+    color: #ECFEFF;
+  }
+
+  h1 {
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin: 20px 0px;
+  }
+
+  #title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  span>i {
+    margin-right: 5px;
+  }
+}

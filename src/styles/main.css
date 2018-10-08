@@ -1,0 +1,29 @@
+html {
+  background-image: linear-gradient(to bottom right, #128494, #00B7C2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all .5s ease;
+
+}
+
+body {
+  /* overflow: hidden; */
+  height: 100vh;
+  margin: 0px 30px;
+  font-family: 'Glegoo', serif;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Snippet', sans-serif;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+button {
+  font-family: 'Glegoo', serif;
+
+}
